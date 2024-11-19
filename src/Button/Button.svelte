@@ -24,11 +24,11 @@
   export let block = false;
 
   /**
-   * Children elements to be rendered inside the component.
+   * content elements to be rendered inside the component.
    * @type {string}
    * @default ''
    */
-  export let children = '';
+  export let content = '';
 
   /**
    * Indicates if the button is a close button.
@@ -115,8 +115,8 @@
     {href}
     aria-label={ariaLabel || defaultAriaLabel}
   >
-    {#if children}
-      {children}
+    {#if content}
+      {content}
     {:else}
       <slot />
     {/if}
@@ -134,8 +134,8 @@
     aria-label={ariaLabel || defaultAriaLabel}
   >
     <slot>
-      {#if children}
-        {children}
+      {#if content}
+        {content}
       {:else}
         <slot />
       {/if}
